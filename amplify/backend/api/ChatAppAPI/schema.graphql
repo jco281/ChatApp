@@ -1,0 +1,14 @@
+type Message @model @auth(rules: [{allow: public}]) @key(name: "byUser", fields: ["userID"]) {
+  id: ID!
+  Message: String
+  DateSent: AWSDateTime
+  Sender: String
+  userID: ID
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Name: String
+  messageID: [Message] @connection(keyName: "byUser", fields: ["id"])
+}
+ 

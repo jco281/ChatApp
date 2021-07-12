@@ -1,0 +1,8 @@
+mutation createMessage {
+    createMessage(input: {DateSent: "2021-07-07T14:54Z", Message: "Created VIA API", Sender: "ed167e14-deef-4a82-b651-3516f11dc93e", userID: "fb2cd95a-0845-49d3-a32b-3fe161212347"}) {
+        DateSent
+        Message
+        Sender
+        userID
+    }
+}

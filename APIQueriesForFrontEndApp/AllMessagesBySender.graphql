@@ -1,0 +1,11 @@
+query all_messages_last_30_days_limit_100 {
+    listMessages(limit: 100, filter: {DateSent: {between: ["2021-06-09", "current_date"]}}) {
+        items {
+            Message
+            Sender
+            id
+            userID
+            DateSent
+        }
+    }
+}
